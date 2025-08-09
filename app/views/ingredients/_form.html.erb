@@ -28,7 +28,7 @@
 
   <div>
     <%= form.label :recipe_id, style: "display: block" %>
-    <%= form.text_field :recipe_id %>
+    <%= form.collection_select :recipe_id, Recipe.all, :id, :name, prompt: "Select a recipe" %>
   </div>
 
   <div>
