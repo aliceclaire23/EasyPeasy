@@ -1,6 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @ingredient %>
+<p><%= render @ingredient %></p>
+
+<p>
+  <strong>Recipe:</strong>
+  <%= @ingredient.recipe ? link_to(@ingredient.recipe.name, @ingredient.recipe) : "No recipe assigned" %>
+</p>
 
 <div>
   <%= link_to "Edit this ingredient", edit_ingredient_path(@ingredient) %> |
