@@ -14,4 +14,16 @@
     <%= recipe.method %>
   </p>
 
+  <p>
+    <strong>Ingredients:</strong>
+    <ul>
+      <% recipe.ingredients.each do |ingredient| %>
+        <li>
+          <%= render ingredient %>
+          <%= link_to "Edit", edit_ingredient_path(ingredient) %>
+        </li>
+      <% end %>
+    </ul>
+  </p>
+
 </div>
