@@ -16,7 +16,7 @@
 
   <p>
     <strong>Recipe:</strong>
-    <%= ingredient.recipe_id %>
+    <%= ingredient.recipe ? link_to(ingredient.recipe.name, ingredient.recipe) : "No recipe assigned" %>
   </p>
 
 </div>
